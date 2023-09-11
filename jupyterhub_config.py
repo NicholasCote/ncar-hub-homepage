@@ -863,7 +863,7 @@ c.JupyterHub.template_vars = c.JupyterHub.template_vars = {
         },
         'designed_by': {
             'name': 'CISL Cloud Pilot Team',
-            'url': 'https://2i2c.org',
+            'url': 'mailto:cisl-cloud-pilot@ucar.edu',
             'custom_html': '',
         }
     }
