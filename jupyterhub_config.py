@@ -179,7 +179,7 @@ ip = public_ips()[0]
 #    - null: jupyterhub.auth.NullAuthenticator
 #    - pam: jupyterhub.auth.PAMAuthenticator
 #  Default: 'jupyterhub.auth.PAMAuthenticator'
-c.JupyterHub.authenticator_class = 'dummy'
+c.JupyterHub.authenticator_class = 'default'
 
 ## The base URL of the entire application.
 #  
@@ -845,25 +845,24 @@ c.JupyterHub.template_paths = ['templates']
 #  Default: {}
 c.JupyterHub.template_vars = c.JupyterHub.template_vars = {
     'custom': {
-        "interface_selector": True,
-        "default_url": "/rstudio",
+        "interface_selector": False,
         'org': {
-            'name': 'University of Foo',
-            'logo_url': 'https://jupyter.org/assets/nav_logo.svg',
-            'url': 'https://jupyter.org',
+            'name': 'NCAR',
+            'logo_url': 'https://ncar.ucar.edu/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/logo-ncar-active.png',
+            'url': 'https://ncar.ucar.edu/',
         },
         'operated_by': {
-            'name': 'Operating Org',
-            'url': 'https://2i2c.org',
+            'name': 'CISL',
+            'url': 'https://www2.cisl.ucar.edu/',
             'custom_html': '',
         },
         'funded_by': {
-            'name': '',
-            'url': '',
-            'custom_html': 'Funding <i>Org</i>',
+            'name': 'NSF',
+            'url': 'https://www.nsf.gov/',
+            'custom_html': '',
         },
         'designed_by': {
-            'name': 'Funding Org',
+            'name': 'CISL Cloud Pilot Team',
             'url': 'https://2i2c.org',
             'custom_html': '',
         }

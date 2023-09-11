@@ -20,17 +20,13 @@
     <a class="navbar-brand" href="#">
       <img src="static/extra-assets/images/CISL-contemp-logo-blue.png" class="logo" alt="logo">
     </a>   
-  </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
+  </div>  
     <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
       <div id="navbar-center" class="mr-auto">      
         <div class="navbar-center-item">
           <ul id="navbar-main-elements" class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link nav-internal" href="">Cloud Docs</a>
+                <a class="nav-link nav-internal" href="https://cloud-docs.k8s.ucar.edu/\">Cloud Docs</a>
             </li>    
           <div class="dropdown">
             <li class="nav-item">
@@ -78,7 +74,7 @@
 <div class="container login-header" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
 
   <div class="text-center">
-    <p class="hub-login-text">The 2i2c JupyterHub for <a href="{{ custom.org.url }}">{{ custom.org.name }}</a></p><br />
+    <p class="hub-login-text">The JupyterHub for <a href="{{ custom.org.url }}">{{ custom.org.name }}</a></p><br />
     <a href="{{ custom.org.url }}">
       <img src="{{ custom.org.logo_url }}" alt="{{ custom.org.name }} logo" class='hub-logo'
         title='hub logo' />
@@ -144,22 +140,17 @@
   <div class="col-md-8 col-md-offset-2 details">
     <div class="col-md-6">
       <big class="details-welcome lead">
-      Welcome to the <a href="{{ custom.org.url }}">{{ custom.org.name }}</a> <strong>2i2c JupyterHub</strong>.
+      Welcome to the <a href="{{ custom.org.url }}">{{ custom.org.name }}</a> <strong> JupyterHub</strong>.
       </big>
       <br />
       <br />
       This is a pilot service running on open source infrastructure.
-      See <a href="https://2i2c.org/pilot">the 2i2c Pilot documentation</a> for usage and deployment information.</p>
+      See <a href="https://cloud-docs.k8s.ucar.edu/">the CISL Cloud Pilot documentation</a> for usage and deployment information.</p>
     </div>
     <div class="col-md-6 details-logos">
       <div class="pull-right">
         <a href="https://jupyter.org">
           <img src="{{static_url("extra-assets/images/jupyter-logo.svg") }}" alt='Jupyter' height="64" />
-        </a>
-      </div>
-      <div class="pull-right">
-        <a href="https://rstudio.com">
-          <img src="{{static_url("extra-assets/images/rstudio-logo.svg") }}" alt='RStudio' height="64"/>
         </a>
       </div>
     </div>
@@ -177,11 +168,6 @@
   {% endif %}
 
   <div class="col-md-8 col-md-offset-2 questions">
-    <div>
-      <h4>Where can I learn more?</h4>
-
-      The <a href="https://2i2c.org/pilot">2i2c Pilot Hubs Documentation</a> has all of the information that you need to use the hub, as well as information about the deployment technology.
-    </div>
     <div>
       <h4>What is a Jupyter Notebook?</h4>
 
@@ -216,8 +202,8 @@
   <div class="footer">
     <p>
       This service is run transparently from
-      <a href="https://github.com/2i2c-org/pilot-hubs">
-        github.com/2i2c-org/pilot-hubs
+      <a href="https://github.com/NCAR/cisl-cloud">
+        github.com/NCAR/cisl-cloud
       </a>
     </p>
     <p>
