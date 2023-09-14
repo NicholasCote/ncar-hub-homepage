@@ -147,13 +147,19 @@
       </big>
       <br />
       <br />
-      This is a pilot service running on open source infrastructure.
+      This is a pilot service running on Kubernetes infrastructure.<br />
       See <a href="https://cloud-docs.k8s.ucar.edu/">the CISL Cloud Pilot documentation</a> for usage and deployment information.</p>
     </div>
     <div class="col-md-6 details-logos">
       <div class="pull-right">
         <a href="https://jupyter.org">
-          <img src="{{static_url("extra-assets/images/jupyter-logo.svg") }}" alt='Jupyter' height="64" />
+          <img src="{{static_url('extra-assets/images/j2k8s.png') }}" alt='Jupyter' height="86" />
+        </a>
+      </div>
+      <hr>
+      <div class="pull-right">
+        <a href="https://nsf.gov">
+          <img src="{{static_url('extra-assets/images/nsf_logo.png') }}" alt='NSF' height="86" />
         </a>
       </div>
     </div>
@@ -172,32 +178,28 @@
 
   <div class="col-md-8 col-md-offset-2 questions">
     <div>
-      <h4>What is a Jupyter Notebook?</h4>
+      <h4>What is JupyterLab?</h4>
 
-      <a href="https://jupyter.org">Jupyter Notebook</a> is an open-source web application that allows you to create and
-      share documents that contain live code, equations, visualizations and narrative
-      text. Uses include: data cleaning and transformation, numerical simulation,
-      statistical modeling, data visualization, machine learning, and much more.
+      <a href="https://jupyter.org">JupyterLab</a> is the latest web-based interactive development environment for notebooks, code, and data. 
+      Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, 
+      and machine learning. A modular design invites extensions to expand and enrich functionality.
 
     </div>
 
     <div>
       <h4>What is JupyterHub?</h4>
-      <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> brings
-      the power of notebooks to groups of users. It gives users access to
-      computational environments and resources without burdening the users with
-      installation and maintenance tasks. Users - including students,
-      researchers, and data scientists - can get their work done in their own
-      workspaces on shared resources which can be managed efficiently by system
-      administrators.
+      <a href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub</a> is the best way to serve JupyterLab to multiple users. 
+      Because JupyterHub manages a separate Jupyter environment for each user, it can be used in a class of students, a corporate data science 
+      group, or a scientific research group. It is a multi-user Hub that spawns, manages, and proxies multiple instances of the single-user 
+      JupyterLab server.
     </div>
 
     <div>
       <h4>Who can use this service?</h4>
 
-      This JupyterHub service is open to anyone that a hub administrator has approved.
-      Generally this means instructors and students. As this
-      is a proof-of-concept service, students should ensure they are backing up
+      This JupyterHub service is open to anyone that a hub administrator approves.
+      As of right now this is limited to NCAR staff and approved affiliated users. As this
+      is a proof-of-concept service, users should ensure they are backing up
       their notebooks regularly if they are using this service for course
       activities.
     </div>

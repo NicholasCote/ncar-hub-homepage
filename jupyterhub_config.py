@@ -179,7 +179,7 @@ ip = public_ips()[0]
 #    - null: jupyterhub.auth.NullAuthenticator
 #    - pam: jupyterhub.auth.PAMAuthenticator
 #  Default: 'jupyterhub.auth.PAMAuthenticator'
-c.JupyterHub.authenticator_class = 'default'
+c.JupyterHub.authenticator_class = 'dummy'
 
 ## The base URL of the entire application.
 #  
@@ -792,7 +792,7 @@ c.JupyterHub.hub_ip = ip
 #  Default: 'jupyterhub.spawner.LocalProcessSpawner'
 c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
 
-c.DockerSpawner.image = 'cislcloudpilot/cisl-cloud-base:latest'
+c.DockerSpawner.image = 'pangeo/pangeo-notebook:latest'
 c.DockerSpawner.host_homedir_format_string = "/home/{username}/jupyterhub"
 c.DockerSpawner.remove = True
 ## Path to SSL certificate file for the public facing interface of the proxy
@@ -843,6 +843,7 @@ c.JupyterHub.template_paths = ['templates']
 
 ## Extra variables to be passed into jinja templates
 #  Default: {}
+
 c.JupyterHub.template_vars = c.JupyterHub.template_vars = {
     'custom': {
         "interface_selector": False,
