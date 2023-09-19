@@ -7,72 +7,65 @@
 {% block stylesheet %}
 {{ super() }}
 <link rel="stylesheet" href="{{ static_url('extra-assets/css/login.css') }}" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 {% endblock %}
 
 {% block script %}
 {{ super() }}
-<script src="{{ static_url('extra-assets/js/login.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block main %}
-<div id="navbar-main">
-  <div class="container-xl">  
-    <div id="navbar-start">  
-      <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-main">
+      <a class="navbar-brand" href="https://www2.cisl.ucar.edu/">
         <img src="static/extra-assets/images/CISL-contemp-logo-blue.png" class="logo" alt="logo">
       </a>   
-    </div>  
-    <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
-      <div id="navbar-center" class="mr-auto">      
-        <div class="navbar-center-item">
-          <ul id="navbar-main-elements" class="navbar-nav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul id="navbar-main-elements" class="navbar-nav mr-auto mt-2 mt-lg-0">   
+                <li class="nav-item">
+                    <a class="nav-link nav-internal" href="https://cloud-docs.k8s.ucar.edu/\">Cloud Docs</a>
+                </li>    
+              <div class="dropdown">
+                <li class="nav-item">
+                  <button class="dropbtn">
+                    <a class="nav-link nav-internal" href="overview/services.html">
+                      Resources <i class="fa fa-chevron-down" style="color: #000000;"></i>
+                    </a>
+                  </button>
+                </li>
+              <div class="dropdown-content">        
+                <a class="dropdown-link" href="https://jupyter.k8s.ucar.edu/">
+                  NCAR JupyterHub
+                </a><br>                
+                <a class="dropdown-link" href="https://ncar-cisl.2i2c.cloud/hub/login">
+                  2i2c JupyterHub
+                </a><br>                
+                <a class="dropdown-link" href="https://rancher.k8s.ucar.edu/">
+                  Rancher
+                </a><br>
+                <a class="dropdown-link" href="https://ithelp.ucar.edu/servicedesk/customer/portal/2/create/17">
+                  Request VM
+                </a><br>
+                <a class="dropdown-link" href="https://stratus-admin.ucar.edu:10443/asview">
+                  Stratus
+                </a><br>      
+              </div>
+            </div>
             <li class="nav-item">
-                <a class="nav-link nav-internal" href="https://cloud-docs.k8s.ucar.edu/\">Cloud Docs</a>
+            <a class="nav-link nav-internal" href="https://jira.ucar.edu/secure/CreateIssueDetails!init.jspa?pid=18470&issuetype=10905">Report issue</a>
             </li>    
-          <div class="dropdown">
-            <li class="nav-item">
-              <button class="dropbtn">
-                <a class="nav-link nav-internal" href="overview/services.html">
-                  Resources <i class="fa fa-chevron-down" style="color: #000000;"></i>
-                </a>
-              </button>
-            </li>
-          <div class="dropdown-content">        
-            <a class="dropdown-link" href="https://jupyter.k8s.ucar.edu/">
-              NCAR JupyterHub
-            </a><br>                
-            <a class="dropdown-link" href="https://ncar-cisl.2i2c.cloud/hub/login">
-              2i2c JupyterHub
-            </a><br>                
-            <a class="dropdown-link" href="https://rancher.k8s.ucar.edu/">
-              Rancher
-            </a><br>
-            <a class="dropdown-link" href="https://ithelp.ucar.edu/servicedesk/customer/portal/2/create/17">
-              Request VM
-            </a><br>
-            <a class="dropdown-link" href="https://stratus-admin.ucar.edu:10443/asview">
-              Stratus
-            </a><br>      
-          </div>
-        </div>
-        <li class="nav-item">
-          <a class="nav-link nav-internal" href="https://www2.cisl.ucar.edu/">CISL Home</a>
-        </li>    
-        <li class="nav-item">
-         <a class="nav-link nav-internal" href="https://jira.ucar.edu/secure/CreateIssueDetails!init.jspa?pid=18470&issuetype=10905">Report issue</a>
-        </li>    
-      </ul>
-    </div>  
-  </div>
-  <div id="navbar-end">  
-    <div class="navbar-end-item">
-      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul> 
-    </div>    
-  </div>
-    </div>
-  </div>
-</div>
+          </ul>
+      </div>  
+      <div id="navbar-end">  
+        <div class="navbar-end-item">
+          <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+          </ul> 
+        </div>    
+      </div>
+</nav>
 <div class="container login-header" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
 
   <div class="text-center">
@@ -150,22 +143,21 @@
       This is a pilot service running on Kubernetes infrastructure.<br />
       See <a href="https://cloud-docs.k8s.ucar.edu/">the CISL Cloud Pilot documentation</a> for usage and deployment information.</p>
     </div>
-    <div class="col-md-6 details-logos">
-      <div class="pull-right">
+    <div class="col-md-6">
+      <div class="pull-right jupyter-img">
         <a href="https://jupyter.org">
-          <img src="{{static_url('extra-assets/images/j2k8s.png') }}" alt='Jupyter' height="86" />
+          <img src="{{static_url('extra-assets/images/j2k8s.png') }}" alt='Jupyter'/>
         </a>
       </div>
-      <hr>
-      <div class="pull-right">
+      <div class="pull-right nsf-image">
         <a href="https://nsf.gov">
-          <img src="{{static_url('extra-assets/images/nsf_logo.png') }}" alt='NSF' height="86" />
+          <img src="{{static_url('extra-assets/images/nsf_logo.png') }}" alt='NSF'/>
         </a>
       </div>
     </div>
 
   </div>
-
+  <br>
   {% if custom.announcements is defined %}
     <div class="col-md-8 col-md-offset-2 announcements" >
       {% for announcement in custom.announcements %}

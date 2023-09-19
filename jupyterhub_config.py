@@ -2,6 +2,7 @@ import dockerspawner
 from jupyter_client.localinterfaces import public_ips
 # Configuration file for jupyterhub.
 
+from oauthenticator.generic import GenericOAuthenticator
 c = get_config()  #noqa
 
 ip = public_ips()[0]
@@ -179,7 +180,7 @@ ip = public_ips()[0]
 #    - null: jupyterhub.auth.NullAuthenticator
 #    - pam: jupyterhub.auth.PAMAuthenticator
 #  Default: 'jupyterhub.auth.PAMAuthenticator'
-c.JupyterHub.authenticator_class = 'dummy'
+c.JupyterHub.authenticator_class = GenericOAuthenticator
 
 ## The base URL of the entire application.
 #  
