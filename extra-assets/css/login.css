@@ -5,8 +5,8 @@
 /* The top level navbar */
 
 img.hub-logo {
-    height: 153.5px;
-    width: 300px;
+    height: auto;
+    width: 55%;
 }
 
 .navbar-brand img {
