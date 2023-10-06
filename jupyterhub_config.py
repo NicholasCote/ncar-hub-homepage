@@ -850,7 +850,7 @@ c.JupyterHub.template_vars = c.JupyterHub.template_vars = {
         "interface_selector": False,
         'org': {
             'name': 'NCAR',
-            'logo_url': 'static/extra-assets/images/CirrusCISL.png',
+            'logo_url': 'static/extra-assets/images/CISL-contemp-logo-blue.png',
             'url': 'https://ncar.ucar.edu/',
         },
         'operated_by': {
