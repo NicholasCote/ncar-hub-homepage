@@ -1,4 +1,7 @@
 from jupyterhub.spawner import SimpleLocalProcessSpawner
+import pathlib
+
+HERE = pathlib.Path(__file__).parent
 
 ## Class for authenticating users.
 #  
@@ -26,7 +29,7 @@ c.JupyterHub.authenticator_class = dummy
 
 ## Paths to search for jinja templates, before using the default templates.
 #  Default: []
-c.JupyterHub.template_paths = ['templates']
+c.JupyterHub.template_paths = [str(HERE / 'templates')]
 
 ## Extra variables to be passed into jinja templates
 #  Default: {}
